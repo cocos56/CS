@@ -1,0 +1,60 @@
+1、卖家表
+create table seller(
+s_id int primary key auto_increment,
+name varchar(20) not null,
+pwd varchar(20) not null,
+balance double not null
+);
+2、买家表
+create table customer(
+c_id int primary key auto_increment,
+name varchar(20) not null,
+pwd varchar(20) not null,
+balance double not null
+);
+3、商品表
+create table goods(
+g_id int auto_increment,
+g_name varchar(20) not null,
+g_price double not null,
+g_amount int default 1,
+g_sid int,
+status bool default true,
+primary key(g_id),
+foreign key(g_sid) references seller(s_id)
+);
+insert into goods values(1,'xihongsi',2.0,30,2,true);
+insert into goods(g_name,g_price,g_amount,g_sid,status) values('baicai',3.2,50,1,true);
+insert into goods(g_name,g_price,g_amount,g_sid,status) values('jiangyou',5,50,1,true);
+insert into goods(g_name,g_price,g_amount,g_sid,status) values('tudou',1.7,100,2,true);
+insert into goods(g_name,g_price,g_amount,g_sid,status) values('maojin',5,70,3,true);
+insert into goods(g_name,g_price,g_amount,g_sid,status) values('yagao',2,80,3,true);
+4、订单表
+create table orderform(
+o_id int not null auto_increment,
+o_date DateTime,
+primary key(o_id)
+);
+5、购买信息表
+create table orderline(
+ol_id int not null auto_increment,
+ol_name varchar(20) not null,
+ol_price double,
+ol_amount int,
+ol_sid int,
+ol_cid int,
+ol_oid int,
+ol_gid int,
+primary key(ol_id),
+foreign key(ol_sid) references seller(s_id),
+foreign key(ol_cid) references customer(c_id),
+foreign key(ol_oid) references orderform(o_id),
+foreign key(ol_gid) references goods(g_id)
+);
+
+
+select ol_sid from orderline where ol_name='xihongsi';
+insert into orderline(ol_name,ol_price,ol_amount,ol_sid,ol_cid,ol_gid) values('ol.Ol_name',ol.Ol_price,ol.Ol_amount,ol.Ol_sid,ol.Ol_cid,ol.Ol_oid,ol.Ol_gid);
+
+
+insert into orderline(ol_name,ol_price,ol_amount,ol_sid,ol_cid,ol_gid) values('ol.Ol_name',ol.Ol_price,ol.Ol_amount,ol.Ol_sid,ol.Ol_cid,ol.Ol_oid,ol.Ol_gid);

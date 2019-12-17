@@ -1,0 +1,30 @@
+1. EnterView
+   1. 用户登录
+   2. 管理员登录
+2. LoginView
+   1. 输入账号
+   2. 输入密码
+3. UserMainView
+   1. 查询持有图书信息
+   2. 查询图书
+   3. 借书
+   4. 还书
+   5. 退出系统
+4. SearchKeepBookView
+5. ReturnBookMainView
+6. ReturnBookView
+7. BorrowBookMainView
+8. BorrowBookView
+9. SearchBookMainView
+10. SearchBookByBookNameView
+11. SearchBookByISBNBiew
+12. SearchBookByAuthorView
+13. SearchBookResultView
+14. ManagerMainView
+   1. 
+15. ManageBookView
+16. AddBookView
+17. DeleteBookView
+18. ManageUserView
+19. AddUserView
+20. DeleteUserView

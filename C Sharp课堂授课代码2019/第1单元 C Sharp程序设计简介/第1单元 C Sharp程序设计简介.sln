@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{29BA34DC-7D8C-43F8-AEF1-08A5C0B7D5D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02命名空间", "02命名空间\02命名空间.csproj", "{D9B87791-72E4-46C9-A707-89A67570BB85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N1", "N1\N1.csproj", "{A3FAFD80-5AD8-4118-A3FB-9CBB9492B31A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29BA34DC-7D8C-43F8-AEF1-08A5C0B7D5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BA34DC-7D8C-43F8-AEF1-08A5C0B7D5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BA34DC-7D8C-43F8-AEF1-08A5C0B7D5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BA34DC-7D8C-43F8-AEF1-08A5C0B7D5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B87791-72E4-46C9-A707-89A67570BB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B87791-72E4-46C9-A707-89A67570BB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B87791-72E4-46C9-A707-89A67570BB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B87791-72E4-46C9-A707-89A67570BB85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3FAFD80-5AD8-4118-A3FB-9CBB9492B31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3FAFD80-5AD8-4118-A3FB-9CBB9492B31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3FAFD80-5AD8-4118-A3FB-9CBB9492B31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3FAFD80-5AD8-4118-A3FB-9CBB9492B31A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

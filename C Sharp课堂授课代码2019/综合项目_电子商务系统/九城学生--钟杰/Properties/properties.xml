@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<MySqlInitialization>
+  <host>localhost</host>
+  <port>3306</port>
+  <username>root</username>
+  <password>856235</password>
+  <database>mostone</database>
+</MySqlInitialization>

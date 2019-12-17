@@ -1,0 +1,70 @@
+1、卖家表
+create table seller(
+s_id int primary key auto_increment,
+name varchar(20) not null,
+pwd varchar(20) not null,
+balance double not null
+);
+
+insert into seller values(1,'dazhang','111111',1000,'s');
+insert into seller(name,pwd,balance,status) values('jiutouya','111111',1200,'s');
+insert into seller(name,pwd,balance,status) values('jialefu','111111',1200,'s');
+insert into seller(name,pwd,balance,status) values('danisi','111111',1200,'s');
+
+2、买家表
+create table customer(
+c_id int primary key auto_increment,
+name varchar(20) not null,
+pwd varchar(20) not null,
+balance double not null
+);
+
+insert into customer values(1,'zhang','111111',2000,'c');
+insert into customer(name,pwd,balance,status) values('wang','111111',1200,'s');
+insert into customer(name,pwd,balance,status) values('li','111111',1200,'s');
+insert into customer(name,pwd,balance,status) values('zhao','111111',1200,'s');
+
+//删除状态一列的字段
+//alter table seller drop status;
+//alter table customer drop status;
+//更改某一字段的名字
+//mysql> alter table seller change id s_id int auto_increment;
+//mysql> alter table customer change id c_id int auto_increment;
+
+3、商品表
+
+create table goods(
+g_id int auto_increment,
+g_name varchar(20) not null,
+g_price double not null,
+g_amount int default 1,
+g_sid int,
+status bool default true,
+primary key(g_id),
+foreign key(g_sid) references seller(s_id)
+);
+
+create table orderform(
+o_id int not null auto_increment,
+o_date DateTime,
+o_cid int not null,
+primary key(o_id),
+foreign key(o_cid) references customer(c_id)
+);
+
+create table buyinfo(
+b_id int not null auto_increment,
+b_name varchar(20) not null,
+b_price double not null,
+b_amount int not null,
+b_sid int not null,
+b_cid int not null,
+b_oid int not null,
+b_gid int not null,
+primary key(b_id),
+foreign key(b_oid) references orderform(o_id),
+foreign key(b_gid) references orderform(g_id)
+foreign key(b_sid) references seller(s_id),
+foreign key(b_cid) references customer(c_id),
+);
+

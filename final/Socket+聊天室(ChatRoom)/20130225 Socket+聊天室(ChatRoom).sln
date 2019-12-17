@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoomServer", "ChatRoomServer\ChatRoomServer.csproj", "{6741DC00-A1AE-47A2-8868-F63FDDF5CDC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoomClient", "ChatRoomClient\ChatRoomClient.csproj", "{F4EC8EA3-4C42-4608-8458-987AB49AC39E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "获取验证码", "获取验证码\获取验证码.csproj", "{07D7E6F7-797F-4959-872F-4E863577A62D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6741DC00-A1AE-47A2-8868-F63FDDF5CDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6741DC00-A1AE-47A2-8868-F63FDDF5CDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6741DC00-A1AE-47A2-8868-F63FDDF5CDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6741DC00-A1AE-47A2-8868-F63FDDF5CDC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EC8EA3-4C42-4608-8458-987AB49AC39E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EC8EA3-4C42-4608-8458-987AB49AC39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EC8EA3-4C42-4608-8458-987AB49AC39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EC8EA3-4C42-4608-8458-987AB49AC39E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D7E6F7-797F-4959-872F-4E863577A62D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D7E6F7-797F-4959-872F-4E863577A62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D7E6F7-797F-4959-872F-4E863577A62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D7E6F7-797F-4959-872F-4E863577A62D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

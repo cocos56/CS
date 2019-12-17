@@ -1,0 +1,5 @@
+C#多线程开发7：使用Monitor类同步多个线程
+https://blog.csdn.net/yl2isoft/article/details/45974777
+
+C# 线程同步技术（三）之 Monitor 和Lock
+https://www.cnblogs.com/lxblog/archive/2013/03/07/2947182.html

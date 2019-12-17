@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Order>
+  <CustomerName>
+    <p>我是一个p标签</p>
+  </CustomerName>
+  <CustomerNumber>&lt;p&gt;我是一个p标签&lt;/p&gt;</CustomerNumber>
+  <Items>
+    <OrderItem Name="一线城市" Count="100">
+    </OrderItem>
+    <OrderItem Name="二线城市" Count="30">
+    </OrderItem>
+    <OrderItem Name="三线城市" Count="70">
+    </OrderItem>
+  </Items>
+</Order>

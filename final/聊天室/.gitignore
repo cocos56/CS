@@ -1,0 +1,9 @@
+
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
+.vs/Chatrrom/v15/.suo
+bin/
+obj/
+Properties/
