@@ -1,9 +1,9 @@
 ﻿namespace BookManagementSystem.Model
 {
-    public enum IdentifyType
-    {
-        None,
-        User,
-        Manager,
-    }
+	public enum IdentifyType
+	{
+		None,
+		User,
+		Manager,
+	}
 }

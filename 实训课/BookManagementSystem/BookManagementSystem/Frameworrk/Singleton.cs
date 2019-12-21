@@ -1,19 +1,19 @@
 ﻿namespace BookManagementSystem.Frameworrk
 {
-    public class Singleton<T> where T:new()
-    {
-        private static T instance;
+	public class Singleton<T> where T:new()
+	{
+		private static T instance;
 
-        public static T Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new T();
-                }
-                return instance;
-            }
-        }
-    }
+		public static T Instance
+		{
+			get
+			{
+				if (instance == null)
+				{
+					instance = new T();
+				}
+				return instance;
+			}
+		}
+	}
 }

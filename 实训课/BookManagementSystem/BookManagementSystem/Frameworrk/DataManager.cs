@@ -2,10 +2,10 @@
 
 namespace BookManagementSystem.Frameworrk
 {
-    public class DataManager:Singleton<DataManager>
-    {
-        public IdentifyType CurrentIdentifyType;
+	public class DataManager:Singleton<DataManager>
+	{
+		public IdentifyType CurrentIdentifyType;
 
-        public Role CurrentRole;
-    }
+		public Role CurrentRole;
+	}
 }

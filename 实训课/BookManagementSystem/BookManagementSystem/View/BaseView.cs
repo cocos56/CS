@@ -1,6 +1,6 @@
 ﻿namespace BookManagementSystem.View
 {
-    public class BaseView
-    {
-    }
+	public class BaseView
+	{
+	}
 }

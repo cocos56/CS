@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BookManagementSystem.Frameworrk;
 using BookManagementSystem.Model;
 using BookManagementSystem.View;
@@ -31,6 +27,7 @@ namespace BookManagementSystem.Controller
                 Error("图书不存在，借书失败！");
             }
         }
+
         /// <summary>
         /// 手中的id
         /// </summary>

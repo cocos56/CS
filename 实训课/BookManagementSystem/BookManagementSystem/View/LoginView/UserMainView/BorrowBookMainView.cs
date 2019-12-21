@@ -16,10 +16,10 @@ namespace BookManagementSystem.View
 			switch (ret)
 			{
 				case "1":
+					Console.Clear();
 					//UserController.Instance.OpenSearchKeepBookView();
 					break;
 				case "2":
-					//UserController.Instance.OpenSearchBookMainView();
 					Console.Clear();
 					UIManager.Instance.Open<UserMainView>().UserMain();
 					break;
