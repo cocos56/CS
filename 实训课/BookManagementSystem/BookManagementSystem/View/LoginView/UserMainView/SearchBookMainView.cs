@@ -8,5 +8,8 @@ namespace BookManagementSystem.View
 {
 	public class SearchBookMainView : BaseView
 	{
+		public void SearchBookMain()
+		{
+		}
 	}
 }

@@ -10,22 +10,22 @@ namespace BookManagementSystem.Controller
     {
         public void OpenSearchKeepBookView()
         {
-            //UIManager.Instance.Open<ManageUserView>().ManagerUser();
-        }
-
-        public void OpenReturnBookMainView()
-        {
-            //UIManager.Instance.Open<ManageUserView>().ManagerUser();
-        }
-
-        public void OpenBorrowBookMainView()
-        {
-            //UIManager.Instance.Open<ManageUserView>().ManagerUser();
+            UIManager.Instance.Open<SearchKeepBookView>().SearchKeepBook();
         }
 
         public void OpenSearchBookMainView()
         {
-            //UIManager.Instance.Open<ManageUserView>().ManagerUser();
+            UIManager.Instance.Open<SearchBookMainView>().SearchBookMain();
+        }
+
+        public void OpenBorrowBookMainView()
+        {
+            UIManager.Instance.Open<BorrowBookMainView>().BorrowBookMain();
+        }
+
+        public void OpenReturnBookMainView()
+        {
+            UIManager.Instance.Open<ReturnBookMainView>().ReturnBookMain();
         }
 
         public void AddUser(string username,string password,string repeatPassword)

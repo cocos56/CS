@@ -20,17 +20,16 @@ namespace BookManagementSystem.View
 			switch (ret)
 			{
 				case "1":
-					//ManagerController.Instance.OpenManageBookView();
+					UserController.Instance.OpenSearchKeepBookView();
 					break;
 				case "2":
-					//TODO 管理用户
-					//ManagerController.Instance.OpenManageUserView();
+					UserController.Instance.OpenSearchBookMainView();
 					break;
 				case "3":
-					//ManagerController.Instance.BackToEnterView();
+					UserController.Instance.OpenBorrowBookMainView();
 					break;
 				case "4":
-					//ManagerController.Instance.BackToEnterView();
+					UserController.Instance.OpenReturnBookMainView();
 					break;
 				case "5":
 					UIManager.Instance.Close();

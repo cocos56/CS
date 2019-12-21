@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BookManagementSystem.View
 {
-	public class BorrowBookMainView : BaseView
+	public class SearchBookByAuthorView : BaseView
 	{
-		public void BorrowBookMain()
+		public void SearchBookByAuthor()
 		{ 
 		}
 	}

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BookManagementSystem.View
 {
-	public class BorrowBookMainView : BaseView
+	public class SearchBooksResultView : BaseView
 	{
-		public void BorrowBookMain()
-		{ 
+		public void SearchBooksResult()
+		{
 		}
 	}
 }
