@@ -1,7 +1,10 @@
 ﻿using BookManagementSystem.Frameworrk;
 using BookManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BookManagementSystem.Cache
 {
@@ -27,6 +30,16 @@ namespace BookManagementSystem.Cache
             return bookDict.ContainsKey(bookId);
         }
 
+        public Book GetBookByBookId(int bookId)
+        {
+            return bookDict[bookId];
+        }
+
+        /// <summary>
+        /// 通过ISBN查询是否存在
+        /// </summary>
+        /// <param name="isbn">图书ISBN</param>
+        /// <returns>true 存在 false 不存在</returns>
         public bool ExistByISBN(string isbn)
         {
             return bookDict.Values.ToList().Exists((item) =>
@@ -42,6 +55,48 @@ namespace BookManagementSystem.Cache
                 return item.ISBN == isbn;
             });
         }
+        /// <summary>
+        /// 通过图书名字查询是否存在
+        /// </summary>
+        /// <param name="name">图书名字</param>
+        /// <returns>true 存在 false 不存在</returns>
+        public bool ExistByName(string name)
+        {
+            return bookDict.Values.ToList().Exists((item) =>
+            {
+                return item.BookName == name;
+            });
+        }
+        public Book GetBookByName(string name)
+        {
+            return bookDict.Values.ToList().Find((item) =>
+            {
+                return item.BookName == name;
+            });
+        }
+        /// <summary>
+        /// 通过图书作者名字查询是否存在
+        /// </summary>
+        /// <param name="authorname">图书作者名字</param>
+        /// <returns>true 存在 false 不存在</returns>
+        public bool ExistByAuthorName(string authorname)
+        {
+            return bookDict.Values.ToList().Exists((item) =>
+            {
+            return item.Author == authorname;
+        });
+        }
+        public Book GetBookByAuthorName(string authorname)
+        {
+            return bookDict.Values.ToList().Find((item) =>
+            {
+                return item.Author == authorname;
+            });
+        }
+
+
+
+
         /// <summary>
         /// 新增图书 
         /// 新增种类
@@ -102,5 +157,6 @@ namespace BookManagementSystem.Cache
         {
             bookDict.Remove(bookId);
         }
+
     }
 }

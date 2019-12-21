@@ -1,5 +1,9 @@
-﻿using System;
-using BookManagementSystem.Frameworrk;
+﻿using BookManagementSystem.Frameworrk;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using BookManagementSystem.Model;
 using BookManagementSystem.View;
 using BookManagementSystem.Cache;
@@ -26,6 +30,7 @@ namespace BookManagementSystem.Controller
                 case Model.IdentifyType.Manager:
                     ManagerLoginResponse(username, password);
                     break;
+
                 default:
                     break;
             }
@@ -34,18 +39,18 @@ namespace BookManagementSystem.Controller
         public void UserLoginResponse(string username, string password)
         {
             User user = AccountCache.Instance.GetUserByUsername(username);
-
             if (user == null)
             {
                 UIManager.Instance.Close();
-                UIManager.Instance.Open<Utils>().Error("用户不存在");
+                UIManager.Instance.Open<EnterView>().Error("用户不存在");
                 UIManager.Instance.Open<EnterView>().Enter();
             }
             else
             {
                 if (user.Username == username && user.Passsword == password)
                 {
-                    UIManager.Instance.Open<UserMainView>().UserMain();
+                    DataManager.Instance.CurrentRole =user;
+                    UIManager.Instance.Open<UserMainView>().userMain();
                 }
                 else
                 {
@@ -53,6 +58,7 @@ namespace BookManagementSystem.Controller
                     UIManager.Instance.Open<EnterView>().Error("用户名或密码错误");
                     UIManager.Instance.Open<EnterView>().Enter();
                 }
+
             }
         }
 
@@ -77,6 +83,8 @@ namespace BookManagementSystem.Controller
                     UIManager.Instance.Open<EnterView>().Error("用户名或密码错误");
                     UIManager.Instance.Open<EnterView>().Enter();
                 }
+
+
             }
         }
     }

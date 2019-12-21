@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookManagementSystem.View
 {
-	public class SearchKeepBookView : BaseView
-	{
-		public void SearchKeepBook()
-		{
-			//底层
-		}
-	}
+    public class BaseView
+    {
+    }
 }
