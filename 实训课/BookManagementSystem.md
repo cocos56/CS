@@ -1,4 +1,4 @@
-1. EnterView
+1. EnterView（已实现）
    1. 用户登录
    2. 管理员登录
 2. LoginView
@@ -11,20 +11,51 @@
    4. 还书
    5. 退出系统
 4. SearchKeepBookView
+   1. 显示持有的所有图书
 5. ReturnBookMainView
+   1. 还书
+   2. 返回
 6. ReturnBookView
+   1. 输入图书ID
 7. BorrowBookMainView
+   1. 借书
+   2. 返回
 8. BorrowBookView
-9. SearchBookMainView
+   1. 输入图书ID
+9.  SearchBookMainView
+    1.  按图书名字查找
+    2.  按图书ISBN查找
+    3.  按图书作者查找
+    4.  列出所有图书
+    5.  返回
 10. SearchBookByBookNameView
-11. SearchBookByISBNBiew
+    1.  输入图书名称
+11. SearchBookByISBNView
+    1.  输入图书的ISBN
 12. SearchBookByAuthorView
+    1.  输入图书的作者
 13. SearchBookResultView
+    1.  显示所有图书信息
 14. ManagerMainView
-   1. 
+    1.  管理图书
+    2.  管理用户
+    3.  退出系统
 15. ManageBookView
+    1.  添加图书
+    2.  删除图书
 16. AddBookView
+    1.  输入ISBN
+    2.  输入图书名字
+    3.  输入图书作者
+    4.  输入图书增加数量
 17. DeleteBookView
+    1.  输入图书ID
 18. ManageUserView
+    1.  增加用户
+    2.  移除用户
 19. AddUserView
+    1.  输入用户账户
+    2.  输入账户密码
+    3.  输入账户借书权限
 20. DeleteUserView
+    1.  输入用户ID

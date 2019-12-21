@@ -36,17 +36,16 @@ namespace BookManagementSystem.Cache
             AddUser("aaa","aaa");
         }
 
-
         public void AddManager(string username,string password)
         {
-            Manager manaher = new Manager()
+            Manager manager = new Manager()
             {
                 ID = MId,
                 Username = username,
                 Passsword = password,
                 IdentifyType = IdentifyType.Manager
             };
-            managerDict.Add(manaher.ID, manaher);
+            managerDict.Add(manager.ID, manager);
         }
 
         public void AddUser(string username, string password)
