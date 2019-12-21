@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookManagementSystem.View
 {
@@ -13,6 +9,7 @@ namespace BookManagementSystem.View
             Console.WriteLine(msg);
             return Console.ReadLine();
         }
+
         /// <summary>
         /// 将输入的字符串转化成Int类型的值
         /// </summary>

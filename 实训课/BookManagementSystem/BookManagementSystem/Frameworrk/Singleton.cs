@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookManagementSystem.Frameworrk
+﻿namespace BookManagementSystem.Frameworrk
 {
     public class Singleton<T> where T:new()
     {
@@ -20,7 +14,6 @@ namespace BookManagementSystem.Frameworrk
                 }
                 return instance;
             }
-
         }
     }
 }

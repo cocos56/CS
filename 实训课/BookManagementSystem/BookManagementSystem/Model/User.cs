@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BookManagementSystem.Model
 {
@@ -21,7 +17,5 @@ namespace BookManagementSystem.Model
         {
             return string.Format("ID:{0} Username:{1} IdentifyType:{2}",ID,Username,IdentifyType.ToString());
         }
-
-
     }
 }

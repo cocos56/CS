@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookManagementSystem.Model
 {
@@ -25,6 +21,5 @@ namespace BookManagementSystem.Model
             Console.WriteLine();
             return string.Format("Id:{0} ISBN{1} bookname:{2} Author{3} Count:{4}",BookId,ISBN,BookName,Author,Count);
         }
-
     }
 }

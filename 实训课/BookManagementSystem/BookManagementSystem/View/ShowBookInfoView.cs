@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BookManagementSystem.Model;
 
 namespace BookManagementSystem.View
@@ -31,12 +28,10 @@ namespace BookManagementSystem.View
             }
         }
 
-
         public void Error(string error)
         {
             Console.WriteLine("***********错误提示**********");
             Console.WriteLine(error);
         }
-
     }
 }

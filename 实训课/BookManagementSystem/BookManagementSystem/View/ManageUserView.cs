@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BookManagementSystem.Controller;
 
 namespace BookManagementSystem.View
 {
     public class ManageUserView:BaseView
     {
-
         public void ManagerUser()
         {
             Console.WriteLine("***************用户管理界面*****************");
@@ -33,12 +28,10 @@ namespace BookManagementSystem.View
                 case "4":
                     UserController.Instance.BackToManageMainView();
                     break;
-
                 default:
                     break;
             }
         }
-
 
         public void Error(string error)
         {
