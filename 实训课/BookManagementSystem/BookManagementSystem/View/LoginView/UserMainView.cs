@@ -1,5 +1,4 @@
 ﻿using BookManagementSystem.Controller;
-using BookManagementSystem.Frameworrk;
 using System;
 
 namespace BookManagementSystem.View
@@ -20,15 +19,19 @@ namespace BookManagementSystem.View
 			switch (ret)
 			{
 				case "1":
+					Console.Clear();
 					UserController.Instance.OpenSearchKeepBookView();
 					break;
 				case "2":
+					Console.Clear();
 					UserController.Instance.OpenSearchBookMainView();
 					break;
 				case "3":
+					Console.Clear();
 					UserController.Instance.OpenBorrowBookMainView();
 					break;
 				case "4":
+					Console.Clear();
 					UserController.Instance.OpenReturnBookMainView();
 					break;
 				case "5":

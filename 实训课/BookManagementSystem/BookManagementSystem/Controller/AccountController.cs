@@ -37,7 +37,7 @@ namespace BookManagementSystem.Controller
 
             if (user == null)
             {
-               Console.Clear();
+                Console.Clear();
                 Utils.Error("用户不存在");
                 UIManager.Instance.Open<EnterView>().Enter();
             }

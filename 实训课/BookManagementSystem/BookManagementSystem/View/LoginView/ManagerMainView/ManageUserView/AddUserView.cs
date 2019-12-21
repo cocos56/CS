@@ -11,7 +11,8 @@ namespace BookManagementSystem.View
             string username = Utils.Input("请输入用户名");
             string password = Utils.Input("请输入密码");
             string repeatPassword = Utils.Input("请再次输入密码");
-            UserController.Instance.AddUser(username, password, repeatPassword);
+            int limit = Convert.ToInt32(Utils.Input("请输入该用户的最大借书数量"));
+            UserController.Instance.AddUser(username, password, repeatPassword, limit);
         }
     }
 }

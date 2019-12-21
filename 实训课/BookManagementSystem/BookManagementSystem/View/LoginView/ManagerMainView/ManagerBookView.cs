@@ -16,21 +16,23 @@ namespace BookManagementSystem.View
             switch (ret)
             {
                 case "1":
+                    Console.Clear();
                     ManagerController.Instance.OpenAddBookView();
                     break;
                 case "2":
-                   
+                    Console.Clear();
                     ManagerController.Instance.OpenDeleteBookView();
                     break;
 
                 case "3":
+                    Console.Clear();
                     ManagerController.Instance.OpenSearchBookView();
                     break;
 
                 case "4":
+                    Console.Clear();
                     ManagerController.Instance.BackToManagerMainView();
                     break;
-
                 default:
                     break;
             }

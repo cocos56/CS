@@ -60,6 +60,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\LoginView\ManagerMainView\ManagerBookView\AddBookView.cs" />
+    <Compile Include="View\LoginView\ManagerMainView\ManageUserView\ModifyUserView.cs" />
     <Compile Include="View\LoginView\ManagerMainView\ManageUserView\AddUserView.cs" />
     <Compile Include="View\BaseView.cs" />
     <Compile Include="View\LoginView\ManagerMainView\ManagerBookView\DeleteBookView.cs" />

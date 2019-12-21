@@ -19,6 +19,5 @@ namespace BookManagementSystem.View
             Console.WriteLine("**********用户删除警告*********");
             Console.WriteLine(error);
         }
-
     }
 }

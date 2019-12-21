@@ -28,27 +28,27 @@ namespace BookManagementSystem.Controller
             UIManager.Instance.Open<ReturnBookMainView>().ReturnBookMain();
         }
 
-        public void AddUser(string username,string password,string repeatPassword)
+        public void AddUser(string username,string password,string repeatPassword, int limit)
         {
             bool ret = AccountCache.Instance.ExistUserByUsername(username);
             if (ret)
             {
-                UIManager.Instance.Open<ManageUserView>().Error("用户已存在");
+                Utils.Error("用户已存在");
             }
             else
             {
                 //前台校验
                 if (password.Length==0 || repeatPassword.Length==0)
                 {
-                    UIManager.Instance.Open<ManageUserView>().Error("密码长度不能为0");
+                    Utils.Error("密码长度不能为0");
                 }
                 else if (password != repeatPassword)
                 {
-                    UIManager.Instance.Open<ManageUserView>().Error("两次密码不一致");
+                    Utils.Error("两次密码不一致");
                 }
                 else
                 {
-                    AccountCache.Instance.AddUser(username, password);
+                    AccountCache.Instance.AddUser(username, password, limit);
                     UIManager.Instance.Open<ManageUserView>().ManagerUser();
                     return;
                 }
@@ -76,6 +76,11 @@ namespace BookManagementSystem.Controller
         public void OpenDeleteUserView()
         {
             UIManager.Instance.Open<DeleteUserView>().DeleteUser();
+        }
+
+        public void OpenModifyUserView()
+        {
+            UIManager.Instance.Open<ModifyUserView>().ModifyUser();
         }
 
         public void DeleteUser(int id)

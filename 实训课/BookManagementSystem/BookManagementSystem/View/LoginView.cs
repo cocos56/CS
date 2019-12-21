@@ -11,6 +11,7 @@ namespace BookManagementSystem.View
             string username = Utils.Input("请输入账户");
             string password = Utils.Input("请输入密码");
 
+            Console.Clear();
             AccountController.Instance.Login(username, password);
         }
     }

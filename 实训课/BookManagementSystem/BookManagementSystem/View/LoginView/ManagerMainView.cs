@@ -1,5 +1,4 @@
 ﻿using BookManagementSystem.Controller;
-using BookManagementSystem.Frameworrk;
 using System;
 
 namespace BookManagementSystem.View
@@ -17,10 +16,11 @@ namespace BookManagementSystem.View
             switch (ret)
             {
                 case "1":
+                    Console.Clear();
                     ManagerController.Instance.OpenManageBookView();
                     break;
                 case "2":
-                    //TODO 管理用户
+                    Console.Clear();
                     ManagerController.Instance.OpenManageUserView();
                     break;
                 case "3":

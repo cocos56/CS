@@ -29,6 +29,8 @@ namespace BookManagementSystem.Cache
             AddManager("111", "111");
             AddUser("aaa","aaa");
 
+            AddManager("a", "a");
+
             AddManager("m", "m");
             AddUser("u", "u");
         }
@@ -45,7 +47,7 @@ namespace BookManagementSystem.Cache
             managerDict.Add(manager.ID, manager);
         }
 
-        public void AddUser(string username, string password)
+        public void AddUser(string username, string password, int limit=3)
         {
             User user = new User()
             {
@@ -53,7 +55,7 @@ namespace BookManagementSystem.Cache
                 Username = username,
                 Passsword = password,
                 IdentifyType = IdentifyType.User,
-                Limit = 3,
+                Limit = limit,
             };
             userDict.Add(user.ID,user);
         }

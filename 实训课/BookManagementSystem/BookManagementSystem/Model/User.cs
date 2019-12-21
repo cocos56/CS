@@ -19,7 +19,7 @@ namespace BookManagementSystem.Model
 
         public override string ToString()
         {
-            return string.Format("ID:{0} Username:{1} IdentifyType:{2}",ID,Username,IdentifyType.ToString());
+            return string.Format("ID:{0} Username:{1} IdentifyType:{2} Limit:{3}",ID,Username,IdentifyType.ToString(),Limit);
         }
 
         public void ShowUserBook()
