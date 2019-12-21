@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BookManagementSystem.Model
 {
-	class Manager : Role
-	{
-	}
+    public class Manager:Role
+    {
+
+    }
 }

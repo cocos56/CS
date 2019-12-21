@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace BookManagementSystem.Model
 {
-	public enum IdentifyType
-	{
-		None,
-		User
-	}
+    public enum IdentifyType
+    {
+        None,
+        User,
+        Manager,
+    }
 }

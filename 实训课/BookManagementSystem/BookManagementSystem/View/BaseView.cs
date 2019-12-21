@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookManagementSystem.View
 {
-	public class BaseView
-	{
-	}
+    public class BaseView
+    {
+    }
 }
