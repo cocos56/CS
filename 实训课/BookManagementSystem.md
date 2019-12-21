@@ -1,7 +1,7 @@
 1. EnterView（已实现）
    1. 用户登录
    2. 管理员登录
-2. LoginView
+2. LoginView（已实现）
    1. 输入账号
    2. 输入密码
 3. UserMainView

@@ -59,18 +59,23 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\AddBookView.cs" />
-    <Compile Include="View\AddUserView.cs" />
+    <Compile Include="View\ManagerController\ManagerBookView\AddBookView.cs" />
+    <Compile Include="View\ManagerController\ManageUserView\AddUserView.cs" />
     <Compile Include="View\BaseView.cs" />
-    <Compile Include="View\DeleteBookView.cs" />
-    <Compile Include="View\DeleteUserView.cs" />
+    <Compile Include="View\ManagerController\ManagerBookView\DeleteBookView.cs" />
+    <Compile Include="View\ManagerController\ManageUserView\DeleteUserView.cs" />
     <Compile Include="View\EnterView.cs" />
     <Compile Include="View\LoginView.cs" />
-    <Compile Include="View\ManagerBookView.cs" />
+    <Compile Include="View\ManagerController\ManagerBookView.cs" />
     <Compile Include="View\ManagerMainView.cs" />
-    <Compile Include="View\ManageUserView.cs" />
+    <Compile Include="View\ManagerController\ManageUserView.cs" />
+    <Compile Include="View\UserController\SearchBookMainView.cs" />
+    <Compile Include="View\UserController\BorrowBookMainView.cs" />
+    <Compile Include="View\UserController\ReturnBookMainView.cs" />
+    <Compile Include="View\UserController\SearchKeepBookView.cs" />
     <Compile Include="View\ShowUsersInfoView.cs" />
     <Compile Include="View\ShowBookInfoView.cs" />
+    <Compile Include="View\UserMainView.cs" />
     <Compile Include="View\Utils.cs" />
   </ItemGroup>
   <ItemGroup>

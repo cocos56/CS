@@ -1,4 +1,5 @@
 ﻿using BookManagementSystem.Controller;
+using BookManagementSystem.Frameworrk;
 using System;
 
 namespace BookManagementSystem.View
@@ -23,6 +24,7 @@ namespace BookManagementSystem.View
                     ManagerController.Instance.OpenManageUserView();
                     break;
                 case "3":
+                    UIManager.Instance.Close();
                     ManagerController.Instance.BackToEnterView();
                     break;
                 default:

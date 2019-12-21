@@ -8,6 +8,26 @@ namespace BookManagementSystem.Controller
 {
     public class UserController:Singleton<UserController>
     {
+        public void OpenSearchKeepBookView()
+        {
+            //UIManager.Instance.Open<ManageUserView>().ManagerUser();
+        }
+
+        public void OpenReturnBookMainView()
+        {
+            //UIManager.Instance.Open<ManageUserView>().ManagerUser();
+        }
+
+        public void OpenBorrowBookMainView()
+        {
+            //UIManager.Instance.Open<ManageUserView>().ManagerUser();
+        }
+
+        public void OpenSearchBookMainView()
+        {
+            //UIManager.Instance.Open<ManageUserView>().ManagerUser();
+        }
+
         public void AddUser(string username,string password,string repeatPassword)
         {
             bool ret = AccountCache.Instance.ExistUserByUsername(username);
@@ -41,7 +61,6 @@ namespace BookManagementSystem.Controller
             UIManager.Instance.Open<AddUserView>().AddUser();
         }
 
-
         public void SearchUsersInfo()
         {
             List<User> userList = AccountCache.Instance.GetAllUserInfo();
@@ -53,7 +72,6 @@ namespace BookManagementSystem.Controller
         {
             UIManager.Instance.Open<ManagerMainView>().ManagerMain();
         }
-
 
         public void OpenDeleteUserView()
         {
@@ -70,7 +88,6 @@ namespace BookManagementSystem.Controller
             else
             {
                 UIManager.Instance.Open<DeleteUserView>().Error("用户不存在，删除失败");
-
             }
             UIManager.Instance.Open<ManageUserView>().ManagerUser();
         }

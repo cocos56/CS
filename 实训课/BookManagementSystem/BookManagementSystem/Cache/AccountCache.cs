@@ -16,24 +16,21 @@ namespace BookManagementSystem.Cache
 
         public static int MId
         {
-            get
-            {
-                return m_id++;
-            }
+            get{return m_id++;}
         }
 
         public static int UId
         {
-            get
-            {
-                return u_id++;
-            }
+            get { return u_id++; }
         }
 
         public AccountCache()
         {
             AddManager("111", "111");
             AddUser("aaa","aaa");
+
+            AddManager("m", "m");
+            AddUser("u", "u");
         }
 
         public void AddManager(string username,string password)

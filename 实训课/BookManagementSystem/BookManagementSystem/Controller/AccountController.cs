@@ -1,4 +1,5 @@
-﻿using BookManagementSystem.Frameworrk;
+﻿using System;
+using BookManagementSystem.Frameworrk;
 using BookManagementSystem.Model;
 using BookManagementSystem.View;
 using BookManagementSystem.Cache;
@@ -25,7 +26,6 @@ namespace BookManagementSystem.Controller
                 case Model.IdentifyType.Manager:
                     ManagerLoginResponse(username, password);
                     break;
-
                 default:
                     break;
             }
@@ -33,7 +33,27 @@ namespace BookManagementSystem.Controller
 
         public void UserLoginResponse(string username, string password)
         {
-           
+            User user = AccountCache.Instance.GetUserByUsername(username);
+
+            if (user == null)
+            {
+                UIManager.Instance.Close();
+                UIManager.Instance.Open<EnterView>().Error("用户不存在");
+                UIManager.Instance.Open<EnterView>().Enter();
+            }
+            else
+            {
+                if (user.Username == username && user.Passsword == password)
+                {
+                    UIManager.Instance.Open<UserMainView>().UserMain();
+                }
+                else
+                {
+                    UIManager.Instance.Close();
+                    UIManager.Instance.Open<EnterView>().Error("用户名或密码错误");
+                    UIManager.Instance.Open<EnterView>().Enter();
+                }
+            }
         }
 
         public void ManagerLoginResponse(string username, string password)
