@@ -54,7 +54,7 @@ namespace BookManagementSystem.Model
         /// </summary>
         /// <param name="book">将要增加的书</param>
         /// <param name="count">增加书的数</param>
-        public void AddUserDic(Book book,int count)
+        public void AddUserDic(Book book,int count,int bookid)
         {
             if (BookCount==Limit ||(BookCount + count) > Limit)
             {
@@ -63,8 +63,14 @@ namespace BookManagementSystem.Model
             }
             else
             {
-
-                AddBook(book, count);
+                if(!ExistByBookId(bookid))
+                {
+                    AddBook(book, count);
+                }
+                else
+                {
+                    bookList[bookid].Count += count;
+                }
                 BookCount += count;
                 BookCache.Instance.UpdateBookCount_Reduce(book,count);
             }
@@ -74,16 +80,17 @@ namespace BookManagementSystem.Model
             if(BookCount>0&&BookCount>=count)
             {
                 int id= GetDictID(book);
-                if((book.Count-count)==0)
+                if((bookList[id].Count-count)==0)
                 {
+                    BookCount -= count;
                     bookList.Remove(id);
                 } 
                 else
                 {
                     BookCount -= count;
-                    BookCache.Instance.UpdateBookCount_Add(book, count);
-                }    
-
+                    ReduceBook(book, count);
+                }
+                BookCache.Instance.UpdateBookCount_Add(book, count);
             }
             else
             {
@@ -95,7 +102,7 @@ namespace BookManagementSystem.Model
         {
             return bookList.Keys.ToList().Find((item) =>
             {
-                return bookList[item] == book;
+                return bookList[item].BookId ==book.BookId;
             });
         }
         public void Error(string error)
@@ -124,18 +131,30 @@ namespace BookManagementSystem.Model
                 return item.BookId == bookid;
             });
         }
+        public Book GetBookByBookId(int bookId)
+        {
+            return bookList[bookId];
+        }
+
         public void AddBook(Book oldbook, int addCount)
         {
-            //TODO增加同名书
+            //增加书
             Book book = new Book()
             {
-                BookId = Id1,
+                BookId = oldbook.BookId,
                 ISBN = oldbook.ISBN,
                 BookName = oldbook.BookName,
                 Author = oldbook.Author,
                 Count = addCount
             };
             bookList.Add(book.BookId, book);
+        }
+        public void ReduceBook(Book book, int reduceCount)
+        {
+            //减少同名书
+  
+            int id = GetDictID(book);
+            bookList[id].Count -= reduceCount;
         }
 
     }

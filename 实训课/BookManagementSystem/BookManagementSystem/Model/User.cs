@@ -25,10 +25,10 @@ namespace BookManagementSystem.Model
         public void ShowUserBook()
         {
 
-            Console.WriteLine("*************展示用户手中所有图书*********");
+            Console.WriteLine("**************展示用户手中所有图书**");
             if (bookList.Count == 0)
             {
-                Utils.Error("********用户手中无书*********");
+                Utils.Error("**************用户手中无书*********");
             }
             else
             {

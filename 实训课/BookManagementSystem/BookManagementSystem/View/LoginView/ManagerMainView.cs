@@ -24,7 +24,7 @@ namespace BookManagementSystem.View
                     ManagerController.Instance.OpenManageUserView();
                     break;
                 case "3":
-                    UIManager.Instance.Close();
+                   Console.Clear();
                     ManagerController.Instance.BackToEnterView();
                     break;
                 default:

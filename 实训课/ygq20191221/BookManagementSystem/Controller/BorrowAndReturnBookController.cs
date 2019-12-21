@@ -12,22 +12,37 @@ namespace BookManagementSystem.Controller
 {
     public class BorrowAndReturnBookController:Singleton<BorrowAndReturnBookController>
     {
+        /// <summary>
+        /// 借书
+        /// </summary>
+        /// <param name="user">用户名</param>
+        /// <param name="count">数量</param>
+        /// <param name="bookId">借的书的id</param>
         public void AddUserBook(User user,int count,int bookId)
         {
+            //判断是不是在图书馆存在
             if (BookCache.Instance.ExistBookByBookId(bookId))
             {
                 Book  book= BookCache.Instance.GetBookByBookId(bookId);
-                user.AddUserDic(book, count);
+                user.AddUserDic(book, count,bookId);
             }
             else
             {
                 Error("图书不存在，借书失败！");
             }
         }
+        /// <summary>
+        /// 手中的id
+        /// </summary>
+        /// <param name="bookId">输入图书的id</param>
+        /// <param name="count"></param>
+        /// <param name="user"></param>
         public void DeleteUserBook(int bookId, int count, User user)
         {
+            //判断是不是在用户手中存在
             if (user.ExistByBookId(bookId))
             {
+                //从bookId取得书
                 Book book = BookCache.Instance.GetBookByBookId(bookId);
                 user.DeleteUserDic(book, count);
             }

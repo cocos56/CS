@@ -12,7 +12,7 @@ namespace BookManagementSystem.Controller
         public void Enter(IdentifyType identifyType )
         {
             DataManager.Instance.CurrentIdentifyType = identifyType;
-            UIManager.Instance.Close();
+           Console.Clear();
             UIManager.Instance.Open<LoginView>().Login();
         }
 
@@ -37,20 +37,22 @@ namespace BookManagementSystem.Controller
 
             if (user == null)
             {
-                UIManager.Instance.Close();
-                UIManager.Instance.Open<Utils>().Error("用户不存在");
+               Console.Clear();
+                Utils.Error("用户不存在");
                 UIManager.Instance.Open<EnterView>().Enter();
             }
             else
             {
                 if (user.Username == username && user.Passsword == password)
                 {
+                    DataManager.Instance.CurrentRole = user;
+                   Console.Clear();
                     UIManager.Instance.Open<UserMainView>().UserMain();
                 }
                 else
                 {
-                    UIManager.Instance.Close();
-                    UIManager.Instance.Open<EnterView>().Error("用户名或密码错误");
+                   Console.Clear();
+                    Console.WriteLine("用户名或密码错误");
                     UIManager.Instance.Open<EnterView>().Enter();
                 }
             }
@@ -61,8 +63,8 @@ namespace BookManagementSystem.Controller
             Manager manager = AccountCache.Instance.GetManagerByUsername(username);
             if (manager == null)
             {
-                UIManager.Instance.Close();
-                UIManager.Instance.Open<EnterView>().Error("用户不存在");
+               Console.Clear();
+                Console.WriteLine("用户不存在");
                 UIManager.Instance.Open<EnterView>().Enter();
             }
             else
@@ -73,8 +75,8 @@ namespace BookManagementSystem.Controller
                 }
                 else
                 {
-                    UIManager.Instance.Close();
-                    UIManager.Instance.Open<EnterView>().Error("用户名或密码错误");
+                    Console.Clear();
+                    Console.WriteLine("用户名或密码错误");
                     UIManager.Instance.Open<EnterView>().Enter();
                 }
             }

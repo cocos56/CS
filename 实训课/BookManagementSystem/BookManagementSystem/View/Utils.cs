@@ -16,6 +16,15 @@ namespace BookManagementSystem.View
             Console.WriteLine(error);
         }
 
+        public static void Continue(System.Action action)
+        {
+            Console.WriteLine("\n**************按任意键以返回******");
+            Console.ReadKey();
+            Console.Clear();
+
+            action.Invoke();
+        }
+
         /// <summary>
         /// 将输入的字符串转化成Int类型的值
         /// </summary>

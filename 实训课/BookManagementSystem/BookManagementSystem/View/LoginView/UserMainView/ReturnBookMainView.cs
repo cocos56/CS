@@ -23,7 +23,7 @@ namespace BookManagementSystem.View
 					//UserController.Instance.OpenSearchKeepBookView();
 					break;
 				case "2":
-					UIManager.Instance.Close();
+					Console.Clear();
 					UIManager.Instance.Open<UserMainView>().UserMain();
 					break;
 				default:

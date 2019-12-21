@@ -25,13 +25,5 @@ namespace BookManagementSystem.Frameworrk
             }
             return viewDict[viewname] as T;
         }
-
-        /// <summary>
-        /// 关闭界面
-        /// </summary>
-        public void Close()
-        {
-            Console.Clear();
-        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookManagementSystem.Frameworrk;
+using BookManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +12,10 @@ namespace BookManagementSystem.View
 	{
 		public void SearchKeepBook()
 		{
-			//底层
+			Console.Clear();
+			User user = DataManager.Instance.CurrentRole as User;
+			user.ShowUserBook();
+			Utils.Continue(delegate () { UIManager.Instance.Open<UserMainView>().UserMain(); });
 		}
 	}
 }
