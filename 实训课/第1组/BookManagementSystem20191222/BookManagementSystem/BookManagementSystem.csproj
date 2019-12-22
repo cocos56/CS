@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8C5D9C7-9C80-4EF0-AC6E-D42CB43EDB56}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookManagementSystem</RootNamespace>
+    <AssemblyName>BookManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\AccountCache.cs" />
+    <Compile Include="Cache\BookCache.cs" />
+    <Compile Include="Controller\AccountController.cs" />
+    <Compile Include="Controller\BookController.cs" />
+    <Compile Include="Controller\BorrowAndReturnBookController.cs" />
+    <Compile Include="Controller\ManagerController.cs" />
+    <Compile Include="Controller\SearchBookController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Frameworrk\DataManager.cs" />
+    <Compile Include="Frameworrk\Singleton.cs" />
+    <Compile Include="Frameworrk\UIManager.cs" />
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\IdentifyType.cs" />
+    <Compile Include="Model\Manager.cs" />
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AddBookView.cs" />
+    <Compile Include="View\AddUserView.cs" />
+    <Compile Include="View\AlterUserLimitView.cs" />
+    <Compile Include="View\BaseView.cs" />
+    <Compile Include="View\BorrowBookMinView.cs" />
+    <Compile Include="View\BorrowBookView.cs" />
+    <Compile Include="View\DeleteBookView.cs" />
+    <Compile Include="View\DeleteUserView.cs" />
+    <Compile Include="View\EnterView.cs" />
+    <Compile Include="View\LoginView.cs" />
+    <Compile Include="View\ManagerBookView.cs" />
+    <Compile Include="View\ManagerMainView.cs" />
+    <Compile Include="View\ManageUserView.cs" />
+    <Compile Include="View\ReturnBookMainView.cs" />
+    <Compile Include="View\ReturnBookView.cs" />
+    <Compile Include="View\SearchBookMainView.cs" />
+    <Compile Include="View\ShowUsersInfoView.cs" />
+    <Compile Include="View\ShowBookInfoView.cs" />
+    <Compile Include="View\UpdatePassWordView.cs" />
+    <Compile Include="View\UpdateUserName.cs" />
+    <Compile Include="View\UserMainView.cs" />
+    <Compile Include="View\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
