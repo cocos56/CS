@@ -46,8 +46,9 @@ namespace BookManagementSystem.Controller
 				if (user.Username == username && user.Passsword == password)
 				{
 					DataManager.Instance.CurrentRole = user;
-				   Console.Clear();
-					UIManager.Instance.Open<UserMainView>().UserMain();
+					Console.Clear();
+					Console.WriteLine("恭喜，登录成功，您的信息为：\n"+user);
+					Utils.Continue(delegate() { UIManager.Instance.Open<UserMainView>().UserMain(); });
 				}
 				else
 				{
@@ -71,7 +72,11 @@ namespace BookManagementSystem.Controller
 			{
 				if (manager.Username == username && manager.Passsword == password)
 				{
-					UIManager.Instance.Open<ManagerMainView>().ManagerMain();
+					DataManager.Instance.CurrentRole = manager;
+					Console.Clear();
+					Console.WriteLine("恭喜，登录成功，您的信息为：\n" + manager);
+					Utils.Continue(delegate (){	UIManager.Instance.Open<ManagerMainView>().ManagerMain();	});
+
 				}
 				else
 				{

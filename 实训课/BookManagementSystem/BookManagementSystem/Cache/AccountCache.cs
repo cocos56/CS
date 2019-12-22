@@ -14,15 +14,9 @@ namespace BookManagementSystem.Cache
 		private static int m_id = 0;
 		private static int u_id = 0;
 
-		public static int MId
-		{
-			get{return m_id++;}
-		}
+		public static int MId{	get{return m_id++;}	}
 
-		public static int UId
-		{
-			get { return u_id++; }
-		}
+		public static int UId{	get { return u_id++; }	}
 
 		public AccountCache()
 		{
@@ -72,15 +66,13 @@ namespace BookManagementSystem.Cache
 				return item.Username == username;
 			});
 		}
+
 		/// <summary>
 		/// 通过Id判断用户是否存在
 		/// </summary>
 		/// <param name="id">用户的Id</param>
 		/// <returns>true 存在  false  不存在 </returns>
-		public bool ExistUserById(int id)
-		{
-			return userDict.ContainsKey(id);
-		}
+		public bool ExistUserById(int id){ return userDict.ContainsKey(id); }
 
 		public bool ExistManagerByUsername(string username)
 		{
@@ -94,10 +86,7 @@ namespace BookManagementSystem.Cache
 			//}
 			//return false;
 
-			return managerDict.Values.ToList().Exists((item) =>
-			{
-				return item.Username == username;
-			});
+			return managerDict.Values.ToList().Exists((item) =>{ return item.Username == username; });
 		}
 
 		public Manager GetManagerByUsername(string username)

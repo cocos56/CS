@@ -3,6 +3,7 @@ using BookManagementSystem.Frameworrk;
 using BookManagementSystem.Cache;
 using BookManagementSystem.View;
 using BookManagementSystem.Model;
+using System;
 
 namespace BookManagementSystem.Controller
 {
@@ -15,13 +16,27 @@ namespace BookManagementSystem.Controller
 		/// <param name="user">用户</param>
 		/// <param name="count">数量</param>
 		/// <param name="bookId">借的书的id</param>
-		public void AddUserBook(User user, int count, int bookId)
+		public void AddBook(User user, int count, int bookId)
 		{
 			//判断是不是在图书馆存在
 			if (BookCache.Instance.ExistBookByBookId(bookId))
 			{
-				//Book book = BookCache.Instance.GetBookByBookId(bookId);
-				//user.AddUserDic(book, count, bookId);
+				Book book = BookCache.Instance.GetBookByBookId(bookId);
+				user.AddBook(book, count);
+			}
+			else
+			{
+				Utils.Error("图书不存在，借书失败！");
+			}
+		}
+
+		public void AddBook(User user, int count, string bookName)
+		{
+			//判断是不是在图书馆存在
+			if (BookCache.Instance.ExistBookByName(bookName))
+			{
+				Book book = BookCache.Instance.GetBookByName(bookName);
+				user.AddBook(book, count);
 			}
 			else
 			{

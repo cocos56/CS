@@ -12,57 +12,57 @@ namespace BookManagementSystem.Cache
 		/// </summary>
 		Dictionary<int, Book> bookDict = new Dictionary<int, Book>();
 
+		public BookCache()
+		{
+			AddBook("001", "c", "cc", 10);
+			AddBook("002", "cs", "cc", 10);
+		}
+
 		private static int bookId = 0;
 
-		public static int BookId
-		{
-			get
-			{
-				return bookId++;
-			}
+		public static int ID{ get{ return bookId++; }}
+
+		public bool ExistBookByBookId(int bookId){ return bookDict.ContainsKey(bookId); }
+
+		public bool ExistByISBN(string isbn){
+			return bookDict.Values.ToList().Exists((item) =>{ return item.ISBN == isbn; });
 		}
 
-		public bool ExistBookByBookId(int bookId)
-		{
-			return bookDict.ContainsKey(bookId);
+		public bool ExistBookByName(string name){
+			return bookDict.Values.ToList().Exists((item) => { return item.Name == name; });
 		}
 
-		public bool ExistByISBN(string isbn)
-		{
-			return bookDict.Values.ToList().Exists((item) =>
-			{
-				return item.ISBN == isbn;
-			});
+		public Book GetBookByBookId(int bookId){ return bookDict[bookId]; }
+
+		public Book GetBookByISBN(string isbn){ 
+			return bookDict.Values.ToList().Find((item)=>{ return item.ISBN == isbn; });
 		}
 
-		public Book GetBookByISBN(string isbn)
-		{
-			return bookDict.Values.ToList().Find((item)=>
-			{
-				return item.ISBN == isbn;
-			});
+		public Book GetBookByName(string name){
+			return bookDict.Values.ToList().Find((item) => { return item.Name == name; });
 		}
+
 		/// <summary>
 		/// 新增图书 
 		/// 新增种类
 		/// </summary>
 		/// <param name="book"></param>
-		public void AddBook(Book book)
-		{
-			book.BookId = BookId;
-			bookDict.Add(book.BookId, book);
+		public void AddBook(Book book){
+			book.ID = ID;
+			bookDict.Add(book.ID, book);
 		}
-		public Book AddBook(string isbn,string bookname,string author,int addCount)
+
+		public Book AddBook(string isbn,string bookname,string author,int count)
 		{
 			Book book = new Book()
 			{
-				BookId = BookId,
+				ID = ID,
 				ISBN = isbn,
-				BookName = bookname,
+				Name = bookname,
 				Author = author,
-				Count = addCount
+				Count = count
 			};
-			bookDict.Add(book.BookId, book);
+			bookDict.Add(book.ID, book);
 			return book;
 		}
 
@@ -71,36 +71,25 @@ namespace BookManagementSystem.Cache
 		/// </summary>
 		/// <param name="book"></param>
 		/// <param name="count"></param>
-		public void UpdateBookCount_Add(Book book, int count)
-		{
-			book.Count += count;
-		}
+		public void UpdateBookCount_Add(Book book, int count){ book.Count += count; }
+
 		/// <summary>
 		/// 图书数量减少
 		/// </summary>
 		/// <param name="book"></param>
 		/// <param name="count"></param>
-		public void UpdateBookCount_Reduce(Book book, int count)
-		{
-			book.Count -= count;
-		}
+		public void UpdateBookCount_Reduce(Book book, int count){ book.Count -= count; }
 
 		/// <summary>
 		/// 获取所有图书
 		/// </summary>
 		/// <returns></returns>
-		public List<Book> GetAllBooks()
-		{
-			return bookDict.Values.ToList();
-		}
+		public List<Book> GetAllBooks(){ return bookDict.Values.ToList(); }
 
 		/// <summary>
 		/// 删除图书
 		/// </summary>
 		/// <param name="bookId"></param>
-		public void DeleteBook(int bookId)
-		{
-			bookDict.Remove(bookId);
-		}
+		public void DeleteBook(int bookId){ bookDict.Remove(bookId); }
 	}
 }

@@ -1,5 +1,4 @@
 ﻿using BookManagementSystem.View;
-using System;
 using System.Collections.Generic;
 
 namespace BookManagementSystem.Frameworrk
@@ -7,9 +6,7 @@ namespace BookManagementSystem.Frameworrk
 	public class UIManager:Singleton<UIManager>
 	{
 		Dictionary<string, BaseView> viewDict = new Dictionary<string, BaseView>();
-
-		List<string> list = new List<string>();
-		// select * from student where id = 2000;
+		
 		/// <summary>
 		/// 打开界面
 		/// </summary>

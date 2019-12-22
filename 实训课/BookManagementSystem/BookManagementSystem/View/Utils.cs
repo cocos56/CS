@@ -18,7 +18,7 @@ namespace BookManagementSystem.View
 
 		public static void Continue(System.Action action)
 		{
-			Console.WriteLine("\n**************按任意键以返回******");
+			Console.WriteLine("\n**************按任意键以继续******");
 			Console.ReadKey();
 			Console.Clear();
 
@@ -30,9 +30,6 @@ namespace BookManagementSystem.View
 		/// </summary>
 		/// <param name="msg"></param>
 		/// <returns></returns>
-		public static int InputInt(string msg)
-	{
-			return int.Parse(Input(msg));
-		}
+		public static int InputInt(string msg){ return int.Parse(Input(msg)); }
 	}
 }

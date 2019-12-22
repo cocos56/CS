@@ -34,7 +34,12 @@ namespace BookManagementSystem.Cache
         public AccountCache()
         {
             AddManager("111", "111");
-            AddUser("aaa","aaa");
+            AddUser("aaa", "aaa");
+
+            AddManager("a", "a");
+
+            AddManager("m", "m");
+            AddUser("u", "u");
         }
 
 
