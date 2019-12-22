@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace _13委托连_多播委托_
 {
     public delegate void DelTest();
+
     class Program
     {
         static void Main(string[] args)
@@ -35,6 +33,5 @@ namespace _13委托连_多播委托_
         {
             Console.WriteLine("我是Test3");
         }
-
     }
 }

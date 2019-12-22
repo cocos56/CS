@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace _09匿名委托函数
 {
     //魏加薪有授课的C#部分视频
     public delegate void DelSayHi(string name);
+
     class Program
     {
         static void Main(string[] args)

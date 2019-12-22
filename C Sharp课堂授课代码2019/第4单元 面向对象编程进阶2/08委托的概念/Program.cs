@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace _08委托的概念
 {
@@ -32,5 +29,4 @@ namespace _08委托的概念
             Console.WriteLine("Nice to meet you!" + name);
         }
     }
-   
 }

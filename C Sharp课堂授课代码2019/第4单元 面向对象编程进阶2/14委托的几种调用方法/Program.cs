@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace _14委托的几种调用方法
 {
     public delegate void GreetingDelegate(string name);
+
     class Program
     {
         static void Main(string[] args)
@@ -35,7 +33,7 @@ namespace _14委托的几种调用方法
             #endregion
             gm.MakeGreet += EnglishGreeting;
             gm.MakeGreet += ChineseGreeting;
-            gm.GreetPeople("XuHong"); 
+            gm.GreetPeople("XuHong");
         }
         private static void EnglishGreeting(string name)
         {
@@ -45,7 +43,6 @@ namespace _14委托的几种调用方法
         {
             Console.WriteLine("早上好, " + name);
         }
-
     }
     public class GreetingManager
     {
@@ -85,7 +82,5 @@ namespace _14委托的几种调用方法
                 MakeGreet(name);
             }
         }
-
-
     }
 }

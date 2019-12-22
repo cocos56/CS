@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace _11泛型委托
 {
@@ -38,5 +35,4 @@ namespace _11泛型委托
             return n1 - n2;
         }
     }
-
 }
