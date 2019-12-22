@@ -1,10 +1,7 @@
 ﻿using BookManagementSystem.Frameworrk;
 using BookManagementSystem.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookManagementSystem.Cache
 {
@@ -16,6 +13,12 @@ namespace BookManagementSystem.Cache
         Dictionary<int, Book> bookDict = new Dictionary<int, Book>();
 
         private static int bookId = 0;
+
+        public BookCache()
+        {
+            AddBook("001", "c", "cc", 10);
+            AddBook("002", "cs", "cc", 10);
+        }
 
         public static int BookId
         {

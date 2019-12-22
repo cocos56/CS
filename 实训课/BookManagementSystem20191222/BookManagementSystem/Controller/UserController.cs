@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using BookManagementSystem.Frameworrk;
 using BookManagementSystem.Cache;
 using BookManagementSystem.View;
@@ -23,7 +19,6 @@ namespace BookManagementSystem.Controller
             if (ret)
             {
                 UIManager.Instance.Open<ManageUserView>().Error("用户已存在");
-
              }
             else
             {

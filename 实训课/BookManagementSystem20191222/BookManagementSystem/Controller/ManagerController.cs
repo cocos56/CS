@@ -1,9 +1,5 @@
 ﻿using BookManagementSystem.Frameworrk;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BookManagementSystem.View;
 using BookManagementSystem.Model;
 using BookManagementSystem.Cache;
@@ -88,6 +84,5 @@ namespace BookManagementSystem.Controller
         {
             UIManager.Instance.Open<UpdateUserName>().updateusername();
         }
-
     }
 }

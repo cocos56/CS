@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BookManagementSystem.Frameworrk;
 using BookManagementSystem.Cache;
 using BookManagementSystem.Model;
@@ -21,8 +18,8 @@ namespace BookManagementSystem.Controller
                 UIManager.Instance.Open<ShowBookInfoView>().ShowBookInfo(book);
                 UIManager.Instance.Open<SearchBookMainView>().SearchBookView();
             }
-
         }
+
         public void FindBookByBookISBN()
         {
             string isbn = Utils.Input("请输入要查询的图书ISBN：");
