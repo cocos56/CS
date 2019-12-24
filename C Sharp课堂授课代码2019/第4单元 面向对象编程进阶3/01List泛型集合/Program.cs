@@ -35,6 +35,8 @@ namespace _01List泛型集合
                 Console.WriteLine(item);
             }
 
+            //Console.WriteLine(list[0]);
+
             Console.ReadKey();
         }
     }

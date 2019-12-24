@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _04飞行棋游戏
 {
@@ -6,8 +8,12 @@ namespace _04飞行棋游戏
     {
         //我们用静态字段来模拟全局变量
         static int[] Maps = new int[100];
+
         //声明一个静态数组用来存储玩家A跟玩家B的坐标
-        static int[] PlayerPos = new int[2];
+        static int[] temp = new int[2];
+        static List<int> PlayerPos=temp.ToList();
+        //static int[] PlayerPos = new int[2];
+
         //存储两个玩家的姓名
         static string[] PlayerNames = new string[2];
         //两个玩家的标记
