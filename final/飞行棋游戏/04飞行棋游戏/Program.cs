@@ -16,11 +16,15 @@ namespace _04飞行棋游戏
 
         //存储两个玩家的姓名
         static string[] PlayerNames = new string[2];
+
         //两个玩家的标记
         static bool[] Flags = new bool[2];//Flags[0]默认是false  Flags[1]默认也是false
+        
         static void Main(string[] args)
         {
-            GameShow();
+            //GameShow();
+            View.getInstance().GameShow();
+
             #region 输入玩家姓名
             Console.WriteLine("请输入玩家A的姓名");
             PlayerNames[0] = Console.ReadLine();
@@ -47,7 +51,8 @@ namespace _04飞行棋游戏
             #endregion
             //玩家姓名输入OK之后 我们首先应该清屏 
             Console.Clear();//清屏
-            GameShow();
+            //GameShow();
+            View.getInstance().GameShow();
             Console.WriteLine("{0}的士兵用A表示",PlayerNames[0]);
             Console.WriteLine("{0}的士兵用B表示",PlayerNames[1]);
             //在画地图之前 首先应该初始化地图
@@ -87,52 +92,12 @@ namespace _04飞行棋游戏
 
 
 
-            Win();
+            //Win();
+            View.getInstance().Win();
 
             Console.ReadKey();
         }
 
-
-
-        /// <summary>
-        /// 胜利
-        /// </summary>
-        public static void Win()
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("                                          ◆                      ");
-            Console.WriteLine("                    ■                  ◆               ■        ■");
-            Console.WriteLine("      ■■■■  ■  ■                ◆■         ■    ■        ■");
-            Console.WriteLine("      ■    ■  ■  ■              ◆  ■         ■    ■        ■");
-            Console.WriteLine("      ■    ■ ■■■■■■       ■■■■■■■   ■    ■        ■");
-            Console.WriteLine("      ■■■■ ■   ■                ●■●       ■    ■        ■");
-            Console.WriteLine("      ■    ■      ■               ● ■ ●      ■    ■        ■");
-            Console.WriteLine("      ■    ■ ■■■■■■         ●  ■  ●     ■    ■        ■");
-            Console.WriteLine("      ■■■■      ■             ●   ■   ■    ■    ■        ■");
-            Console.WriteLine("      ■    ■      ■            ■    ■         ■    ■        ■");
-            Console.WriteLine("      ■    ■      ■                  ■               ■        ■ ");
-            Console.WriteLine("     ■     ■      ■                  ■           ●  ■          ");
-            Console.WriteLine("    ■    ■■ ■■■■■■             ■              ●         ●");
-            Console.ResetColor();
-        }
-        /// <summary>
-        /// 画游戏头
-        /// </summary>
-        public static void GameShow()
-        {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("**************************");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("**************************");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("**************************");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("***0505.Net基础班飞行棋***");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("**************************");
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("**************************");
-        }
         /// <summary>
         /// 初始化地图
         /// </summary>
@@ -160,6 +125,7 @@ namespace _04飞行棋游戏
                 Maps[timeTunnel[i]] = 4;
             }
         }
+
         public static void DrawMap()
         {
             Console.WriteLine("图例:幸运轮盘:◎   地雷:☆   暂停:▲   时空隧道:卐");
@@ -207,6 +173,7 @@ namespace _04飞行棋游戏
             //画完最后一行  应该换行
             Console.WriteLine();
         }//DrawMap方法的结尾
+
         /// <summary>
         /// 从画地图的方法中抽象出来的一个方法
         /// </summary>
@@ -259,6 +226,7 @@ namespace _04飞行棋游戏
             return str;
             #endregion
         }
+
         /// <summary>
         /// 玩游戏
         /// </summary>
