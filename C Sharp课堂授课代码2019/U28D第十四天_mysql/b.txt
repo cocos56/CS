@@ -1,0 +1,58 @@
+﻿5大约束
+主键约束 不可重复唯一 primary key
+外键 foreign key 
+非空 not null
+唯一性 union 
+check('男'，'女')
+// char[15]
+create table student(
+ id int primary key,
+name varchar(15) not null,
+sex varchar(8),
+grade int not null
+);
+
+1.求数学这门课所有学生的成绩
+求数学这门课的id ，2 此id对应的所有成绩
+select id from course where name ='math';// id = 1
+
+select * from score where c_id = (
+select id from course where name ='math');
+//子查询， 把其他查询的结果，作为下次查询的条件
+
+2.求kobe 3门课的 成绩 平均分 总分
+组函数 ---》由多个值返回一个值
+avg() sum() max()  min() count()
+
+select avg(sc_num) from score 
+where s_id = (select id from student
+ where name='kobe');
+
+
+3.每个学科的平均成绩
+select avg(sc_num) from score group by c_id;
+
+4.求每个人的平均成绩，并按照成绩高低进行排序
+select avg(sc_num) a from score group by s_id
+order by a desc;
+
+5. 1号课程里面谁的成绩最高
+
+每门课第一名是谁？
+
+select c_id, max(sc_num) from score group by c_id
+
+select name,s_id,c_id from score,
+(select c_id a, max(sc_num) b from score group by c_id) t,student
+where score.c_id = t.a and t.b = score.sc_num
+and student.id = s_id;
+
+求每个人数学成绩
+
+
+
+
+
+
+
+
