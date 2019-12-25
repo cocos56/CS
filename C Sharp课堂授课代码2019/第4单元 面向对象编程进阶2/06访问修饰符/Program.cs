@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace _06访问修饰符
+﻿namespace _06访问修饰符
 {
     class Program
     {
@@ -11,10 +6,9 @@ namespace _06访问修饰符
         {
             Person p = new Person();
             Student s = new Student();
-            
-            
         }
     }
+
     public class Person
     {
         private char _gender;//不能被子类继承
@@ -23,6 +17,7 @@ namespace _06访问修饰符
         internal int _chinese;//仅可以在当前项目当中访问到
         protected internal int _math;
     }
+
     public class Student : Person
     {
         public Student()

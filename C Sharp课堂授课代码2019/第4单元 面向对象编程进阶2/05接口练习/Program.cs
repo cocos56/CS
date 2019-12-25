@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using _06访问修饰符;
 
 namespace _05接口练习
@@ -63,5 +60,4 @@ namespace _05接口练习
             Console.WriteLine("木头鸭子仅会飘在水上");
         }
     }
-
 }

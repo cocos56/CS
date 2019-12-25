@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace _03接口练习_多态
 {
@@ -22,6 +19,7 @@ namespace _03接口练习_多态
         }
 
     }
+
     //当抽象类中的方法都是抽象方法的时候，就可以将抽象类改为接口
     public interface IFlyable
     {
@@ -78,6 +76,4 @@ namespace _03接口练习_多态
             Console.WriteLine("直升飞机转动螺旋桨进行飞翔");
         }
     }
-
-
 }

@@ -7,6 +7,9 @@ namespace _01接口
         static void Main(string[] args)
         {
             //接口：其实就是一种能力、规范
+
+
+            Console.ReadKey();
         }
     }
     public class Person

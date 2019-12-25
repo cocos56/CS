@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace _04显示实现接口
 {
@@ -13,9 +10,9 @@ namespace _04显示实现接口
             //fly.Fly();
             Bird bird = new Bird();
             bird.Fly();
-           
         }
     }
+
     public interface IFlyable
     {
         void Fly();
@@ -34,5 +31,4 @@ namespace _04显示实现接口
             Console.WriteLine("我是接口的飞");
         }
     }
-
 }
