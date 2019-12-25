@@ -48,11 +48,3 @@ where score.c_id = t.a and t.b = score.sc_num
 and student.id = s_id;
 
 求每个人数学成绩
-
-
-
-
-
-
-
-

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace U28D第十五天
@@ -20,16 +17,17 @@ namespace U28D第十五天
         static void Main(string[] args)
         {
             ////string url = "User ID=root;Password=myPassword;Host=localhost;Port=3306;Database=zhang;";//zhang 为自己定义的数据库
-            string url = "User ID=root;Password=;Host=localhost;Port=3306;Database=zhang;";//Password=密码为空什么都不写 localhost本地 ID=root用户
+            string url = "User ID=zj175;Password=i,@mc0c0@my;Host=coco56.top;Port=6603;Database=zhang;";//Password=密码为空什么都不写 localhost本地 ID=root用户
             MySqlConnection conn = new MySqlConnection(url);//创建数据库连接
             conn.Open();//数据库连接打开
-            //string sql = "select * from student";//创建sql语句
-            //string sql = "select * from student where id=1";//创建sql语句
 
-            string sql = "insert into student values(18,'ppp','man',4)";//创建sql语句
+            string sql = "truncate table student;";//创建sql语句
             MySqlCommand comd = new MySqlCommand(sql, conn);//发送sql语句给数据库服务器
-            //MySqlDataReader reader = comd.ExecuteReader();//执行sql语句 MySqlDataReader类似于迭代器
             
+            sql = "insert into student values(18,'ppp','man',4)";//创建sql语句
+            comd = new MySqlCommand(sql, conn);//发送sql语句给数据库服务器
+            //MySqlDataReader reader = comd.ExecuteReader();//执行sql语句 MySqlDataReader类似于迭代器
+
             //while (reader.Read())//判断是否有下一个
             //{
             //    Console.WriteLine(reader.GetInt32(0));//拿到ID
@@ -37,10 +35,10 @@ namespace U28D第十五天
             //    Console.WriteLine(reader.GetString(2));//拿到性别
             //    Console.WriteLine("---------");
             //}
-            
+
             ////1.hasNext CurrentValue
-            int a = comd.ExecuteNonQuery();//表示受影响的行数
-            Console.WriteLine(a);//执行sql语句受影响的行数 不能执行第2次
+            //int a = comd.ExecuteNonQuery();//表示受影响的行数
+            //Console.WriteLine(a);//执行sql语句受影响的行数 不能执行第2次
 
             //public static bool FindStudentByName(string name)函数
             //bool b = FindStudentByName("shunv");
@@ -61,6 +59,10 @@ namespace U28D第十五天
             //{
             //    Console.WriteLine(list[i].Id + " " + list[i].Name + " " + list[i].Sex + " " + list[i].Grade);
             //}
+
+            conn.Close();
+            Console.WriteLine("\nPress any key to quit.");
+            Console.ReadKey();
         }
         public static bool FindStudentByName(string name)
         {

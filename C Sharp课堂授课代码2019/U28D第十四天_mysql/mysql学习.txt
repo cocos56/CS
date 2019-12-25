@@ -1,24 +1,24 @@
-Æô¶¯mysql·½·¨1£º
-cmd--->mysqld.exe(Æô¶¯mysql)--->(µÇÂ¼)mysql -u root -p(Ä¬ÈÏÃÜÂë»Ø³µ)--->show databases;--->create database zhang;--->use zhang;
+å¯åŠ¨mysqlæ–¹æ³•1ï¼š
+cmd--->mysqld.exe(å¯åŠ¨mysql)--->(ç™»å½•)mysql -u root -p(é»˜è®¤å¯†ç å›è½¦)--->show databases;--->create database zhang;--->use zhang;
 
-Æô¶¯mysql·½·¨2£º
-C:\Windows\System32--->ÕÒµ½cmd-->ÓÒ¼üÒÔ¹ÜÀíÔ±Éí·İµÇÂ¼--->mysqld.exe(Æô¶¯mysql)--->(µÇÂ¼)mysql -u root -p(Ä¬ÈÏÃÜÂë»Ø³µ)--->show databases;--->create database zhang;--->use zhang;
+å¯åŠ¨mysqlæ–¹æ³•2ï¼š
+C:\Windows\System32--->æ‰¾åˆ°cmd-->å³é”®ä»¥ç®¡ç†å‘˜èº«ä»½ç™»å½•--->mysqld.exe(å¯åŠ¨mysql)--->(ç™»å½•)mysql -u root -p(é»˜è®¤å¯†ç å›è½¦)--->show databases;--->create database zhang;--->use zhang;
 
-½¨±íµÄ»ù±¾ÒªÇó£º5´óÔ¼Êø
-1 Ö÷¼üÔ¼Êø£ºÎ¨Ò»±íÊ¾Ò»ĞĞ£¬²»¿ÉÖØ¸´(Ö÷¼üÊÇÎ¨Ò»µÄ¡£Ò»¸öÊı¾İ±íÖĞÖ»ÄÜ°üº¬Ò»¸öÖ÷¼ü¡£Äã¿ÉÒÔÊ¹ÓÃÖ÷¼üÀ´²éÑ¯Êı¾İ)-->primary key-->Í¨³£ÒÔIDÎªÖ÷¼ü IDµÄÔö³¤²ßÂÔ¡£
-2 Íâ¼ü(foreign key):Ò»¸ö±íÖĞµÄ×Ö¶ÎºÍÁíÍâÒ»¸ö±íÖĞµÄ×Ö¶ÎÈç¹ûÊÇÒ»Ò»¶ÔÓ¦µÄ»°£¬ÄÇÃ´ÕâÒ»×Ö¶ÎµÄÁĞ¾ÍÊÇÍâ¼ü(Íâ¼üÓÃÓÚ¹ØÁªÁ½¸ö±í)
-3 ·Ç¿Õ£ºÉè¼ÆÒ»ÁĞ£¬²»ÄÜÎª¿ÕµÄ»°¡£ 
-4 Î¨Ò»ĞÔ£º²»ÄÜ¹»³öÏÖÖØ¸´µÄ
-5 check£ºÔÚOracleÖĞÓĞÓÃ£¬ÔÚmysqlÖĞ²»ÄÜÓÃ¡£Èç£¨¡®ÄĞ¡¯£¬¡®Å®¡¯£©
+å»ºè¡¨çš„åŸºæœ¬è¦æ±‚ï¼š5å¤§çº¦æŸ
+1 ä¸»é”®çº¦æŸï¼šå”¯ä¸€è¡¨ç¤ºä¸€è¡Œï¼Œä¸å¯é‡å¤(ä¸»é”®æ˜¯å”¯ä¸€çš„ã€‚ä¸€ä¸ªæ•°æ®è¡¨ä¸­åªèƒ½åŒ…å«ä¸€ä¸ªä¸»é”®ã€‚ä½ å¯ä»¥ä½¿ç”¨ä¸»é”®æ¥æŸ¥è¯¢æ•°æ®)-->primary key-->é€šå¸¸ä»¥IDä¸ºä¸»é”® IDçš„å¢é•¿ç­–ç•¥ã€‚
+2 å¤–é”®(foreign key):ä¸€ä¸ªè¡¨ä¸­çš„å­—æ®µå’Œå¦å¤–ä¸€ä¸ªè¡¨ä¸­çš„å­—æ®µå¦‚æœæ˜¯ä¸€ä¸€å¯¹åº”çš„è¯ï¼Œé‚£ä¹ˆè¿™ä¸€å­—æ®µçš„åˆ—å°±æ˜¯å¤–é”®(å¤–é”®ç”¨äºå…³è”ä¸¤ä¸ªè¡¨)
+3 éç©ºï¼šè®¾è®¡ä¸€åˆ—ï¼Œä¸èƒ½ä¸ºç©ºçš„è¯ã€‚ 
+4 å”¯ä¸€æ€§ï¼šä¸èƒ½å¤Ÿå‡ºç°é‡å¤çš„
+5 checkï¼šåœ¨Oracleä¸­æœ‰ç”¨ï¼Œåœ¨mysqlä¸­ä¸èƒ½ç”¨ã€‚å¦‚ï¼ˆâ€˜ç”·â€™ï¼Œâ€˜å¥³â€™ï¼‰
 
-varchar(15)(varchar¿É±ä×Ö·û£¬½ÚÊ¡¿Õ¼ä)-->Ïàµ±ÓÚchar[15]£¬Ìá¸ß¼ìË÷Ğ§ÂÊ,²»¹»15¸ö×Ö·û£¬ÆäËûÒÔ¿Õ¸ñÌî³ä.
+varchar(15)(varcharå¯å˜å­—ç¬¦ï¼ŒèŠ‚çœç©ºé—´)-->ç›¸å½“äºchar[15]ï¼Œæé«˜æ£€ç´¢æ•ˆç‡,ä¸å¤Ÿ15ä¸ªå­—ç¬¦ï¼Œå…¶ä»–ä»¥ç©ºæ ¼å¡«å…….
 
 create database zhang;
 
 use zhang;
 show tables;
 
-(±íºÍÀàÒ»Ò»¶ÔÓ¦)
+(è¡¨å’Œç±»ä¸€ä¸€å¯¹åº”)
 create table student(
 id int primary key,
 name varchar(15) not null,
@@ -57,10 +57,10 @@ create table score(
 s_id int,
 c_id int,
 sc_num int not null,
-foreign key (s_id) references student(id),//ĞĞ¼¶Ô¼Êø
+foreign key (s_id) references student(id),//è¡Œçº§çº¦æŸ
 foreign key (c_id) references course(id),
-primary key(s_id,c_id)//¸´ºÏÖ÷¼ü
-//µ±Ò»¸ö×Ö¶ÎÎŞ·¨È·¶¨Î¨Ò»ĞÔµÄÊ±ºò£¬ĞèÒªÆäËû×Ö¶ÎÀ´Ò»ÆğĞÎ³ÉÎ¨Ò»ĞÔ¡£¾ÍÊÇËµÓÃÀ´×é³ÉÎ¨Ò»ĞÔµÄ×Ö¶ÎÈç¹ûÓĞ¶à¸ö¾ÍÊÇÁªºÏÖ÷¼ü
+primary key(s_id,c_id)//å¤åˆä¸»é”®
+//å½“ä¸€ä¸ªå­—æ®µæ— æ³•ç¡®å®šå”¯ä¸€æ€§çš„æ—¶å€™ï¼Œéœ€è¦å…¶ä»–å­—æ®µæ¥ä¸€èµ·å½¢æˆå”¯ä¸€æ€§ã€‚å°±æ˜¯è¯´ç”¨æ¥ç»„æˆå”¯ä¸€æ€§çš„å­—æ®µå¦‚æœæœ‰å¤šä¸ªå°±æ˜¯è”åˆä¸»é”®
 );
 
 insert into score values(1,1,80);
@@ -104,7 +104,7 @@ desc course;//desc-->describe
 
 select * from student;
 
-where¼ÓÏŞ¶¨Ìõ¼ş£º
+whereåŠ é™å®šæ¡ä»¶ï¼š
 select * from student where grade=2;
 select * from student where id>5;
 select * from student where id>5 and id<7;
@@ -112,11 +112,8 @@ select * from student where id>6 or id<3;
 select * from student where id between 5 and 7;
 
 select * from student where id between 5 and 7 and grade=2;
-//likeÄ£ºı²éÑ¯
-select * from student where name like '%z%';//%´ú±íÁã¸ö»ò¶à¸ö×Ö·û  SQL LIKE ×Ó¾äÖĞÊ¹ÓÃ°Ù·ÖºÅ(%)×Ö·ûÀ´±íÊ¾ÈÎÒâ×Ö·û£¬ÀàËÆÓÚUNIX»òÕıÔò±í´ïÊ½ÖĞµÄĞÇºÅ (*)¡£
+//likeæ¨¡ç³ŠæŸ¥è¯¢
+select * from student where name like '%z%';//%ä»£è¡¨é›¶ä¸ªæˆ–å¤šä¸ªå­—ç¬¦  SQL LIKE å­å¥ä¸­ä½¿ç”¨ç™¾åˆ†å·(%)å­—ç¬¦æ¥è¡¨ç¤ºä»»æ„å­—ç¬¦ï¼Œç±»ä¼¼äºUNIXæˆ–æ­£åˆ™è¡¨è¾¾å¼ä¸­çš„æ˜Ÿå· (*)ã€‚
 select * from student where name like '%z';
 select * from student where name like 'z%';
-select * from student where name like '_a%';//µÚ¶ş¸ö×ÖÄ¸ÊÇaµÄ×Ö·û´®  _±íÊ¾ÈÎÒâÒ»¸ö×Ö·û
-
-
-
+select * from student where name like '_a%';//ç¬¬äºŒä¸ªå­—æ¯æ˜¯açš„å­—ç¬¦ä¸²  _è¡¨ç¤ºä»»æ„ä¸€ä¸ªå­—ç¬¦
