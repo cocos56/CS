@@ -35,10 +35,12 @@ namespace _14委托的几种调用方法
 			gm.MakeGreet += ChineseGreeting;
 			gm.GreetPeople("XuHong");
 		}
+
 		private static void EnglishGreeting(string name)
 		{
 			Console.WriteLine("Morning, " + name);
 		}
+
 		private static void ChineseGreeting(string name)
 		{
 			Console.WriteLine("早上好, " + name);
